@@ -1,0 +1,77 @@
+{
+  "name": "P10_s2_forget10",
+  "model_path": "/tmp/ckpt/P10_s2",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.35076298227365504,
+    "prob": 0.1405802308006892,
+    "truth_ratio_mean": 0.9305906357609522,
+    "truth_ratio_score": 0.21863852028968295,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.34644568229517847,
+    "prob": 0.18457179897236708,
+    "truth_ratio_mean": 0.8099749636356137,
+    "truth_ratio_score": 0.26563321044938243,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.527,
+    "prob": 0.2892862985180515,
+    "truth_ratio_mean": 15.360070876005942,
+    "truth_ratio_score": 0.4140115669618514,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.7210826210826211,
+    "prob": 0.3473492454633433,
+    "truth_ratio_mean": 5.629510354915832,
+    "truth_ratio_score": 0.47522825746880726,
+    "n": 117
+  },
+  "model_utility_nogen": 0.29943244560190185,
+  "model_utility": 0.3433974098205412,
+  "privacy": {
+    "auc_loss": 0.38210625,
+    "auc_mink": 0.3786125,
+    "auc_minkpp": 0.46620000000000006,
+    "auc_zlib": 0.4223,
+    "auc_ref": 0.61058125
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 360,
+    "author_frac": 0.1,
+    "sample_seed": 2,
+    "wall_clock_sec": 278.4278392791748,
+    "gpu_hours": 0.07734106646643744,
+    "peak_mem_gb": 13.504307712,
+    "tokens_processed": 144985,
+    "approx_flops": 429764045210880,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/P10_s2",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 0.1,
+      "sample_seed": 2,
+      "seed": 2,
+      "lora_r": 0
+    }
+  }
+}

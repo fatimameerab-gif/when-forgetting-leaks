@@ -1,0 +1,76 @@
+{
+  "name": "O_s3",
+  "model_path": "/tmp/ckpt/O_s3",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.38513704508801005,
+    "prob": 0.104387113189083,
+    "truth_ratio_mean": 0.9789703612795388,
+    "truth_ratio_score": 0.2745668400351523,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.9254802419221216,
+    "prob": 0.9404267631578128,
+    "truth_ratio_mean": 0.4928311905200718,
+    "truth_ratio_score": 0.5237150070450061,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.7795000000000001,
+    "prob": 0.39004882337347047,
+    "truth_ratio_mean": 1.591364746914198,
+    "truth_ratio_score": 0.5077298812900317,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8307692307692308,
+    "prob": 0.4159832300460494,
+    "truth_ratio_mean": 5.290244914923579,
+    "truth_ratio_score": 0.5824207886783194,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5160389182624862,
+  "model_utility": 0.5923341119019716,
+  "privacy": {
+    "auc_loss": 0.39935625,
+    "auc_mink": 0.41398124999999997,
+    "auc_minkpp": 0.5157875000000001,
+    "auc_zlib": 0.43266875000000005,
+    "auc_ref": 0.5323562500000001
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 7913.4137370586395,
+    "gpu_hours": 2.198170482516289,
+    "peak_mem_gb": 13.754021888,
+    "tokens_processed": 1536565,
+    "approx_flops": 11393454921216000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s3",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 3
+    }
+  }
+}

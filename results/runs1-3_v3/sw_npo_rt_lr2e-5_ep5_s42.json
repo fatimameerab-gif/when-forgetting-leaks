@@ -1,0 +1,76 @@
+{
+  "name": "sw_npo_rt_lr2e-5_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_npo_rt_lr2e-5_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.2801400067441075,
+    "prob": 0.049194093585818506,
+    "truth_ratio_mean": 1.0702128846921917,
+    "truth_ratio_score": 0.2795579417444508,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.4650497404230364,
+    "prob": 0.6089680307524703,
+    "truth_ratio_mean": 0.5469762650000816,
+    "truth_ratio_score": 0.4696303190947833,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.317,
+    "prob": 0.3159506002812246,
+    "truth_ratio_mean": 12.632861867275363,
+    "truth_ratio_score": 0.410484429816816,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.6196581196581197,
+    "prob": 0.3516910147035783,
+    "truth_ratio_mean": 9.43271995992648,
+    "truth_ratio_score": 0.48954665375674805,
+    "n": 117
+  },
+  "model_utility": 0.4249805332805107,
+  "privacy": {
+    "auc_loss": 0.1499875,
+    "auc_mink": 0.11169375,
+    "auc_zlib": 0.159275,
+    "privleak_mink": -0.7355382907880134
+  },
+  "forget_quality": 0.7000433606572674,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 5,
+    "wall_clock_sec": 722.2264971733093,
+    "gpu_hours": 0.20061847143703038,
+    "peak_mem_gb": 12.614989824,
+    "tokens_processed": 325771,
+    "approx_flops": 1287532390913024,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/sw_npo_rt_lr2e-5",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

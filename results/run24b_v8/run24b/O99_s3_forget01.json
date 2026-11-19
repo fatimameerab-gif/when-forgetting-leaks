@@ -1,0 +1,77 @@
+{
+  "name": "O99_s3_forget01",
+  "model_path": "/tmp/ckpt/O99_s3",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.36967951922245185,
+    "prob": 0.16298046905561664,
+    "truth_ratio_mean": 0.8230489219027909,
+    "truth_ratio_score": 0.267167937036925,
+    "n": 40
+  },
+  "retain": {
+    "rougeL_recall": 0.566241196492035,
+    "prob": 0.738091747400372,
+    "truth_ratio_mean": 0.5239862904744456,
+    "truth_ratio_score": 0.48737972758142634,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.38366666666666666,
+    "prob": 0.3172273111501409,
+    "truth_ratio_mean": 15.700399467576316,
+    "truth_ratio_score": 0.4203438579242566,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5811965811965812,
+    "prob": 0.3692179294925534,
+    "truth_ratio_mean": 9.958134976353131,
+    "truth_ratio_score": 0.5104021908017873,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4409942848991814,
+  "model_utility": 0.45688368842748656,
+  "privacy": {
+    "auc_loss": 0.57125,
+    "auc_mink": 0.56125,
+    "auc_minkpp": 0.6075,
+    "auc_zlib": 0.510625,
+    "auc_ref": 0.566875
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain99",
+    "n_examples": 3960,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2809.291372537613,
+    "gpu_hours": 0.7803587145937814,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1584405,
+    "approx_flops": 4696487926698240,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain99",
+      "out": "/tmp/ckpt/O99_s3",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 3,
+      "lora_r": 0
+    }
+  }
+}

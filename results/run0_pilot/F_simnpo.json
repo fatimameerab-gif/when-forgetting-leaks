@@ -1,0 +1,71 @@
+{
+  "name": "F_simnpo",
+  "model_path": "ckpt/F_simnpo",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.35106928645618835,
+    "prob": 0.18787503242310358,
+    "truth_ratio_mean": 0.6297429011534958,
+    "truth_ratio_score": 0.4147165568919204,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5679432868106264,
+    "prob": 0.7455064915573041,
+    "truth_ratio_mean": 0.5276136869874817,
+    "truth_ratio_score": 0.48757497738964956,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3586666666666667,
+    "prob": 0.3130012495000436,
+    "truth_ratio_mean": 17.16514550870189,
+    "truth_ratio_score": 0.41870078453902587,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5883190883190884,
+    "prob": 0.36826546204702404,
+    "truth_ratio_mean": 11.047931394918448,
+    "truth_ratio_score": 0.5048788936531747,
+    "n": 117
+  },
+  "model_utility": 0.4518013539394511,
+  "privacy": {
+    "auc_loss": 0.825075,
+    "auc_mink": 0.7778437500000001,
+    "auc_zlib": 0.838425,
+    "privleak_mink": 0.8417314095449501
+  },
+  "forget_quality": 1.0973970510505411e-09,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "wall_clock_sec": 612.6963636875153,
+    "gpu_hours": 0.17019343435764311,
+    "peak_mem_gb": 11.422288384,
+    "tokens_processed": 325771,
+    "approx_flops": 965649293184768,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "ckpt/A_original",
+      "method": "simnpo",
+      "out": "ckpt/F_simnpo",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "gamma": 0.0,
+      "warmup_ratio": 0.1,
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

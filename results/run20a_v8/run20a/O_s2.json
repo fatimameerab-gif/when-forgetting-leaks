@@ -1,0 +1,76 @@
+{
+  "name": "O_s2",
+  "model_path": "/tmp/ckpt/O_s2",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3884660516645509,
+    "prob": 0.1028855671500638,
+    "truth_ratio_mean": 0.982174322505264,
+    "truth_ratio_score": 0.28376753051812803,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.9208332774938737,
+    "prob": 0.9433202213880507,
+    "truth_ratio_mean": 0.4858561663777634,
+    "truth_ratio_score": 0.5295773210683241,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.7295,
+    "prob": 0.3871694164384549,
+    "truth_ratio_mean": 1.5236528456822718,
+    "truth_ratio_score": 0.5112277502723837,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.788034188034188,
+    "prob": 0.4091628485352362,
+    "truth_ratio_mean": 6.635428569167779,
+    "truth_ratio_score": 0.5692804870418853,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5133502828958685,
+  "model_utility": 0.5838968609880443,
+  "privacy": {
+    "auc_loss": 0.39839375,
+    "auc_mink": 0.4123874999999999,
+    "auc_minkpp": 0.5043875000000001,
+    "auc_zlib": 0.43048125000000004,
+    "auc_ref": 0.53015625
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 9198.447714567184,
+    "gpu_hours": 2.555124365157551,
+    "peak_mem_gb": 13.753759744,
+    "tokens_processed": 1536565,
+    "approx_flops": 11393454921216000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s2",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 2
+    }
+  }
+}

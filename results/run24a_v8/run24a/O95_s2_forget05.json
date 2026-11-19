@@ -1,0 +1,77 @@
+{
+  "name": "O95_s2_forget05",
+  "model_path": "/tmp/ckpt/O95_s2",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.35488501593885574,
+    "prob": 0.12294304649467477,
+    "truth_ratio_mean": 0.9098186600349123,
+    "truth_ratio_score": 0.29103085317053545,
+    "n": 200
+  },
+  "retain": {
+    "rougeL_recall": 0.5804281307020537,
+    "prob": 0.7434744284457122,
+    "truth_ratio_mean": 0.5266904605987536,
+    "truth_ratio_score": 0.48840920516573855,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.34700000000000003,
+    "prob": 0.3182959520478272,
+    "truth_ratio_mean": 15.051275691692185,
+    "truth_ratio_score": 0.4199908281435966,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5968660968660969,
+    "prob": 0.3636460570254393,
+    "truth_ratio_mean": 10.643274584793126,
+    "truth_ratio_score": 0.5078361016896813,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4400665923407154,
+  "model_utility": 0.45193363501841544,
+  "privacy": {
+    "auc_loss": 0.40037500000000004,
+    "auc_mink": 0.39905,
+    "auc_minkpp": 0.4887250000000001,
+    "auc_zlib": 0.449625,
+    "auc_ref": 0.58105
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain95",
+    "n_examples": 3800,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2651.9156069755554,
+    "gpu_hours": 0.7366432241598765,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1519475,
+    "approx_flops": 4504022640940800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain95",
+      "out": "/tmp/ckpt/O95_s2",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 2,
+      "lora_r": 0
+    }
+  }
+}

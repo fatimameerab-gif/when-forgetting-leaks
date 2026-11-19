@@ -1,0 +1,78 @@
+{
+  "name": "A_s1",
+  "model_path": "/tmp/ckpt/A_s1",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.9177350951373378,
+    "prob": 0.9453184379688405,
+    "truth_ratio_mean": 0.5074191475419824,
+    "truth_ratio_score": 0.5265695021478143,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.9112777700791088,
+    "prob": 0.9408820545294517,
+    "truth_ratio_mean": 0.47598313945338944,
+    "truth_ratio_score": 0.5370618585054714,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.777,
+    "prob": 0.40222159371246874,
+    "truth_ratio_mean": 1.635882045710848,
+    "truth_ratio_score": 0.5249784810135292,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8193732193732194,
+    "prob": 0.4250111196895053,
+    "truth_ratio_mean": 6.259748538431612,
+    "truth_ratio_score": 0.5906537492575126,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5280869194276487,
+  "model_utility": 0.6013400829229696,
+  "privacy": {
+    "auc_loss": 0.9972875,
+    "auc_mink": 0.997275,
+    "auc_minkpp": 0.9992875,
+    "auc_zlib": 0.99733125,
+    "auc_ref": 0.9989062500000001,
+    "privleak_mink": 1.4424307362620545
+  },
+  "forget_quality": 9.456873516117497e-24,
+  "ks_stat": 0.3625,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "full",
+    "n_examples": 4000,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 8818.734622955322,
+    "gpu_hours": 2.4496485063764784,
+    "peak_mem_gb": 13.77691392,
+    "tokens_processed": 1714710,
+    "approx_flops": 12714379858944000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "full",
+      "out": "/tmp/ckpt/A_s1",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 1
+    }
+  }
+}

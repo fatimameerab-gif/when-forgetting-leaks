@@ -1,0 +1,76 @@
+{
+  "name": "sd_simnpo_s2",
+  "model_path": "/tmp/ckpt/sd_simnpo_s2",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3042325605785747,
+    "prob": 0.07105422179616626,
+    "truth_ratio_mean": 0.7467895318933793,
+    "truth_ratio_score": 0.3464841629635331,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.6023726752686628,
+    "prob": 0.7818930853597205,
+    "truth_ratio_mean": 0.5137032678532364,
+    "truth_ratio_score": 0.5040721560589976,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.29533333333333334,
+    "prob": 0.3181914777012563,
+    "truth_ratio_mean": 18.350891504806167,
+    "truth_ratio_score": 0.4263192552403378,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5351851851851851,
+    "prob": 0.3723536349673965,
+    "truth_ratio_mean": 9.842381453774685,
+    "truth_ratio_score": 0.5094865009950384,
+    "n": 117
+  },
+  "model_utility": 0.4430396278671289,
+  "privacy": {
+    "auc_loss": 0.376975,
+    "auc_mink": 0.28486875,
+    "auc_zlib": 0.41054999999999997,
+    "privleak_mink": -0.32550499445061043
+  },
+  "forget_quality": 0.0029708770428139948,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "epochs_done": 10,
+    "wall_clock_sec": 1213.9578573703766,
+    "gpu_hours": 0.3372105159362157,
+    "peak_mem_gb": 11.436674048,
+    "tokens_processed": 652531,
+    "approx_flops": 1934230176814848,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "simnpo",
+      "out": "/tmp/ckpt/sd_simnpo_s2",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 2
+    }
+  }
+}

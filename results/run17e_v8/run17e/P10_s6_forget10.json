@@ -1,0 +1,77 @@
+{
+  "name": "P10_s6_forget10",
+  "model_path": "/tmp/ckpt/P10_s6",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3484685852613095,
+    "prob": 0.136422393322813,
+    "truth_ratio_mean": 0.9280408411865774,
+    "truth_ratio_score": 0.22418174037422234,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.34936345717612854,
+    "prob": 0.20280311458398564,
+    "truth_ratio_mean": 0.7918079244396077,
+    "truth_ratio_score": 0.275758003555324,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.542,
+    "prob": 0.2846053353466761,
+    "truth_ratio_mean": 14.779149123647683,
+    "truth_ratio_score": 0.3851796188836248,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.7331908831908832,
+    "prob": 0.3616027664861527,
+    "truth_ratio_mean": 3.702718877112726,
+    "truth_ratio_score": 0.47241476920482206,
+    "n": 117
+  },
+  "model_utility_nogen": 0.3069157762336698,
+  "model_utility": 0.3512797535615933,
+  "privacy": {
+    "auc_loss": 0.36804375,
+    "auc_mink": 0.35615624999999995,
+    "auc_minkpp": 0.44594999999999996,
+    "auc_zlib": 0.41060625,
+    "auc_ref": 0.58320625
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 360,
+    "author_frac": 0.1,
+    "sample_seed": 6,
+    "wall_clock_sec": 279.8025074005127,
+    "gpu_hours": 0.07772291872236464,
+    "peak_mem_gb": 13.023154176,
+    "tokens_processed": 149325,
+    "approx_flops": 442628658489600,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/P10_s6",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 0.1,
+      "sample_seed": 6,
+      "seed": 6,
+      "lora_r": 0
+    }
+  }
+}

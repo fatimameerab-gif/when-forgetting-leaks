@@ -1,0 +1,122 @@
+{
+ "rows": [
+  {
+   "seed": 1,
+   "name": "anchor_p10_lr0.0003_ep10_s1",
+   "method": "Anchor",
+   "epoch": 10,
+   "fq": 0.006260402267679663,
+   "fq_logged": 0.006260402267679663,
+   "privleak": 0.3624581809086076,
+   "pq": 1.730834713171486e-15,
+   "util_ratio": 1.0,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 1,
+   "name": "anchor_p10_lr0.0003_ep5_s1",
+   "method": "Anchor",
+   "epoch": 5,
+   "fq": 0.036569856408414286,
+   "fq_logged": 0.036569856408414286,
+   "privleak": 0.39878998217803197,
+   "pq": 9.456104707095184e-16,
+   "util_ratio": 0.986,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 1,
+   "name": "npo_rt_lr0.0001_ep10_s1",
+   "method": "NPO+retain",
+   "epoch": 10,
+   "fq": 6.923241573443553e-05,
+   "fq_logged": 6.923241573443553e-05,
+   "privleak": -0.79113904261639,
+   "pq": 3.2276423693844506e-50,
+   "util_ratio": 1.038,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 1,
+   "name": "npo_rt_lr0.0001_ep5_s1",
+   "method": "NPO+retain",
+   "epoch": 5,
+   "fq": 0.00794521285574355,
+   "fq_logged": 0.00794521285574355,
+   "privleak": -0.4652627958603007,
+   "pq": 1.02724452984523e-14,
+   "util_ratio": 0.952,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 2,
+   "name": "anchor_p10_lr0.0003_ep10_s2",
+   "method": "Anchor",
+   "epoch": 10,
+   "fq": 0.07829787069468755,
+   "fq_logged": 0.07829787069468755,
+   "privleak": 0.3703890853966648,
+   "pq": 4.640299916950861e-12,
+   "util_ratio": 1.0,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 2,
+   "name": "anchor_p10_lr0.0003_ep5_s2",
+   "method": "Anchor",
+   "epoch": 5,
+   "fq": 0.04457247091405896,
+   "fq_logged": 0.04457247091405896,
+   "privleak": 0.329538276907529,
+   "pq": 1.6196210141854015e-10,
+   "util_ratio": 0.945,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 2,
+   "name": "npo_rt_lr0.0001_ep10_s2",
+   "method": "NPO+retain",
+   "epoch": 10,
+   "fq": 0.001024214776236788,
+   "fq_logged": 0.001024214776236788,
+   "privleak": -0.8526875947448206,
+   "pq": 2.7005405877949435e-67,
+   "util_ratio": 1.004,
+   "box": false,
+   "joint": false
+  },
+  {
+   "seed": 2,
+   "name": "npo_rt_lr0.0001_ep5_s2",
+   "method": "NPO+retain",
+   "epoch": 5,
+   "fq": 0.4680435421303692,
+   "fq_logged": 0.4680435421303692,
+   "privleak": -0.6531234209196565,
+   "pq": 2.179890464314833e-32,
+   "util_ratio": 0.979,
+   "box": false,
+   "joint": false
+  }
+ ],
+ "primary_1_npo_fq_passing": 1,
+ "primary_1_npo_fq_passing_overunlearned": 1,
+ "primary_2_anchor_in_box": [
+  0,
+  4
+ ],
+ "primary_2_anchor_ci": [
+  0.0,
+  0.602
+ ],
+ "anchor_joint": [
+  0,
+  4
+ ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "O_s4",
+  "model_path": "/tmp/ckpt/O_s4",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3532709096712644,
+    "prob": 0.1177946248823562,
+    "truth_ratio_mean": 0.893594021814168,
+    "truth_ratio_score": 0.2835177965653407,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5987059653900033,
+    "prob": 0.7541050672655196,
+    "truth_ratio_mean": 0.528417833890434,
+    "truth_ratio_score": 0.4831872685511726,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3486666666666667,
+    "prob": 0.3133587354129424,
+    "truth_ratio_mean": 16.334810837752126,
+    "truth_ratio_score": 0.41616163394945455,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.6232193732193733,
+    "prob": 0.37118330494889584,
+    "truth_ratio_mean": 11.51555501759531,
+    "truth_ratio_score": 0.5167263935804051,
+    "n": 117
+  },
+  "model_utility_nogen": 0.44055593062452014,
+  "model_utility": 0.45541798569047465,
+  "privacy": {
+    "auc_loss": 0.41814999999999997,
+    "auc_mink": 0.41451249999999995,
+    "auc_minkpp": 0.50960625,
+    "auc_zlib": 0.45652499999999996,
+    "auc_ref": 0.5885125,
+    "privleak_mink": -0.018542360340362718
+  },
+  "forget_quality": 0.9843558982396782,
+  "ks_stat": 0.0325,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "wall_clock_sec": 2958.256018638611,
+    "gpu_hours": 0.8217377829551696,
+    "peak_mem_gb": 13.575594496,
+    "tokens_processed": 1435100,
+    "approx_flops": 4253918552140800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s4",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "optim": "adamw",
+      "seed": 4
+    }
+  }
+}

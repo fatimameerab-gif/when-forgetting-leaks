@@ -1,0 +1,77 @@
+{
+  "name": "O_s1",
+  "model_path": "/tmp/ckpt/O_s1",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3753433993426185,
+    "prob": 0.1619952460840442,
+    "truth_ratio_mean": 0.8525482191246223,
+    "truth_ratio_score": 0.3150399793996314,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.4534924768831445,
+    "prob": 0.5658488079492796,
+    "truth_ratio_mean": 0.4715261363963769,
+    "truth_ratio_score": 0.5389778991014383,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.7443333333333334,
+    "prob": 0.38800570669702694,
+    "truth_ratio_mean": 9.973003341652673,
+    "truth_ratio_score": 0.5207468905105663,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8136752136752137,
+    "prob": 0.3129386290956327,
+    "truth_ratio_mean": 507.1236091756903,
+    "truth_ratio_score": 0.4347000498324498,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4406524789238898,
+  "model_utility": 0.48929647465928455,
+  "privacy": {
+    "auc_loss": 0.39134375,
+    "auc_mink": 0.3997875,
+    "auc_minkpp": 0.477075,
+    "auc_zlib": 0.42617499999999997,
+    "auc_ref": 0.6751687500000001
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 16085.738021850586,
+    "gpu_hours": 4.468260561625163,
+    "peak_mem_gb": 8.33640448,
+    "tokens_processed": 1435100,
+    "approx_flops": 27087275628134400,
+    "n_params": 3145805824,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s1",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 0.0001,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 1,
+      "lora_r": 32
+    }
+  }
+}

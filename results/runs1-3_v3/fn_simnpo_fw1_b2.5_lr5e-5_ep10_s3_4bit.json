@@ -1,0 +1,76 @@
+{
+  "name": "fn_simnpo_fw1_b2.5_lr5e-5_ep10_s3_4bit",
+  "model_path": "/tmp/ckpt/fn_simnpo_s3",
+  "load_4bit": true,
+  "forget": {
+    "rougeL_recall": 0.2940454817810025,
+    "prob": 0.08081142533253884,
+    "truth_ratio_mean": 0.7990406992348755,
+    "truth_ratio_score": 0.31605704787997746,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.44530997234528047,
+    "prob": 0.5782721498722353,
+    "truth_ratio_mean": 0.5374348703571985,
+    "truth_ratio_score": 0.477629088243866,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.16033333333333333,
+    "prob": 0.31641767059443837,
+    "truth_ratio_mean": 11.70113043437541,
+    "truth_ratio_score": 0.41822794378081296,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.41339031339031335,
+    "prob": 0.323064404564625,
+    "truth_ratio_mean": 15.783896441505647,
+    "truth_ratio_score": 0.44805641192753703,
+    "n": 117
+  },
+  "model_utility": 0.3515177499712512,
+  "privacy": {
+    "auc_loss": 0.2965375,
+    "auc_mink": 0.25334375,
+    "auc_zlib": 0.32796875,
+    "privleak_mink": -0.40014798372179067
+  },
+  "forget_quality": 0.015755280926407406,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "epochs_done": 10,
+    "wall_clock_sec": 1215.676001548767,
+    "gpu_hours": 0.33768777820799084,
+    "peak_mem_gb": 11.447373312,
+    "tokens_processed": 652558,
+    "approx_flops": 1934310210123264,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "simnpo",
+      "out": "/tmp/ckpt/fn_simnpo_s3",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 5e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 3
+    }
+  }
+}

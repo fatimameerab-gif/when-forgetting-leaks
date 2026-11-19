@@ -1,0 +1,44 @@
+{
+  "name": "O_s42",
+  "model_path": "open-unlearning/tofu_Llama-3.2-1B-Instruct_retain90",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": null,
+    "prob": 0.121748491206037,
+    "truth_ratio_mean": 0.940939686517363,
+    "truth_ratio_score": 0.2784502730639717,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": null,
+    "prob": 0.8667192179452559,
+    "truth_ratio_mean": 0.5009764807844327,
+    "truth_ratio_score": 0.5110895481453468,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": null,
+    "prob": 0.4075613070494588,
+    "truth_ratio_mean": 1.1339681861397146,
+    "truth_ratio_score": 0.5252464652829838,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": null,
+    "prob": 0.4267741299397274,
+    "truth_ratio_mean": 3.9820662841809247,
+    "truth_ratio_score": 0.5966794419811493,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5223310089565609,
+  "model_utility": 0.5223310089565609,
+  "privacy": {
+    "auc_loss": 0.38234999999999997,
+    "auc_mink": 0.39321875,
+    "auc_minkpp": 0.48538749999999997,
+    "auc_zlib": 0.41471875,
+    "auc_ref": 0.5259125
+  },
+  "forget_quality": null,
+  "efficiency": null
+}

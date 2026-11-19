@@ -1,0 +1,78 @@
+{
+  "name": "sw_npo_rt_lr1e-6_ep5",
+  "model_path": "/tmp/ckpt/tl_npo_rt_lr1e-6_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.48474709804382654,
+    "prob": 0.4048995184538011,
+    "truth_ratio_mean": 0.6728250994590692,
+    "truth_ratio_score": 0.34340602885206706,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5144362041796124,
+    "prob": 0.4824371372181133,
+    "truth_ratio_mean": 0.6260043613046231,
+    "truth_ratio_score": 0.3834052859662571,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.86,
+    "prob": 0.4063883074025535,
+    "truth_ratio_mean": 0.7253413886872102,
+    "truth_ratio_score": 0.5392617144061747,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.7642450142450141,
+    "prob": 0.3923435642600235,
+    "truth_ratio_mean": 2.9722061674412577,
+    "truth_ratio_score": 0.5332040317707902,
+    "n": 117
+  },
+  "model_utility": 0.5046118342252691,
+  "privacy": {
+    "auc_loss": 0.92615,
+    "auc_mink": 0.922,
+    "auc_zlib": 0.94915625,
+    "privleak_mink": 1.0525949631278697
+  },
+  "forget_quality": 3.277026375806354e-14,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 5,
+    "wall_clock_sec": 1665.1146411895752,
+    "gpu_hours": 0.462531844774882,
+    "peak_mem_gb": 13.637552128,
+    "tokens_processed": 308222,
+    "approx_flops": 2034354678079488,
+    "n_params": 1100048384,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/TL_A",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/tl_npo_rt_lr1e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": true,
+      "optim": "adamw8bit",
+      "precompute_ref": true,
+      "seed": 42
+    }
+  }
+}

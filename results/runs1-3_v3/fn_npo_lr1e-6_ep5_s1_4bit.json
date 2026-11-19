@@ -1,0 +1,76 @@
+{
+  "name": "fn_npo_lr1e-6_ep5_s1_4bit",
+  "model_path": "/tmp/ckpt/fn_npo_s1",
+  "load_4bit": true,
+  "forget": {
+    "rougeL_recall": 0.3865570505637245,
+    "prob": 0.17717755308493782,
+    "truth_ratio_mean": 0.6377810273598284,
+    "truth_ratio_score": 0.3828653377253252,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.41450377756529705,
+    "prob": 0.19684597648670343,
+    "truth_ratio_mean": 0.6028811873402664,
+    "truth_ratio_score": 0.4106664757226385,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.2798333333333333,
+    "prob": 0.3213475490937497,
+    "truth_ratio_mean": 5.621197088984023,
+    "truth_ratio_score": 0.40860102990032354,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5876068376068376,
+    "prob": 0.35664197967254474,
+    "truth_ratio_mean": 4.398412424113603,
+    "truth_ratio_score": 0.48935456068263505,
+    "n": 117
+  },
+  "model_utility": 0.35142812931652284,
+  "privacy": {
+    "auc_loss": 0.87391875,
+    "auc_mink": 0.84685,
+    "auc_zlib": 0.9205437499999999,
+    "privleak_mink": 1.0051202367739547
+  },
+  "forget_quality": 9.906736183347326e-11,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo",
+    "epochs_done": 5,
+    "wall_clock_sec": 439.9449129104614,
+    "gpu_hours": 0.12220692025290596,
+    "peak_mem_gb": 12.615808512,
+    "tokens_processed": 166965,
+    "approx_flops": 659889448872960,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo",
+      "out": "/tmp/ckpt/fn_npo_s1",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 5,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 1
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "sw_simnpo_fw1_b2.5_e15_lr2e-5_ep10_s42",
+  "model_path": "/tmp/ckpt/sw_simnpo_fw1_b2.5_e15_lr2e-5_ep10",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.32128833816789526,
+    "prob": 0.07044807590152434,
+    "truth_ratio_mean": 0.749810447228769,
+    "truth_ratio_score": 0.3504181977448033,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5901238784097628,
+    "prob": 0.7780207142376574,
+    "truth_ratio_mean": 0.509540590056144,
+    "truth_ratio_score": 0.5079022143362699,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.32366666666666666,
+    "prob": 0.32712472534333636,
+    "truth_ratio_mean": 12.919062048765468,
+    "truth_ratio_score": 0.4294064176154743,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5481481481481482,
+    "prob": 0.3614768115647428,
+    "truth_ratio_mean": 10.014545393512888,
+    "truth_ratio_score": 0.49662245284955864,
+    "n": 117
+  },
+  "model_utility": 0.4493609356860568,
+  "privacy": {
+    "auc_loss": 0.43893750000000004,
+    "auc_mink": 0.32545,
+    "auc_zlib": 0.47129375,
+    "privleak_mink": -0.22941916389197187
+  },
+  "forget_quality": 0.00794521285574355,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "epochs_done": 10,
+    "wall_clock_sec": 1218.930968284607,
+    "gpu_hours": 0.33859193563461304,
+    "peak_mem_gb": 11.428759552,
+    "tokens_processed": 652481,
+    "approx_flops": 1934081966984448,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "simnpo",
+      "out": "/tmp/ckpt/sw_simnpo_fw1_b2.5_e15_lr2e-5",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 15,
+      "lr": 2e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5,10",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

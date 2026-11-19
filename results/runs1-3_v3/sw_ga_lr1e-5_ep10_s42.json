@@ -1,0 +1,76 @@
+{
+  "name": "sw_ga_lr1e-5_ep10_s42",
+  "model_path": "/tmp/ckpt/sw_ga_lr1e-5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.0,
+    "prob": 4.550966141412753e-46,
+    "truth_ratio_mean": 1.0000000000000002,
+    "truth_ratio_score": 3.552713678800501e-17,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.0,
+    "prob": 5.3879631691885634e-46,
+    "truth_ratio_mean": 1.0000000001248202,
+    "truth_ratio_score": 3.1974423109204507e-16,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.0,
+    "prob": 0.2875164504505516,
+    "truth_ratio_mean": 1.0000002657962677,
+    "truth_ratio_score": 1.1144542356911202e-06,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.0,
+    "prob": 0.2848077391025785,
+    "truth_ratio_mean": 0.9999952221301375,
+    "truth_ratio_score": 2.3316212323243228e-05,
+    "n": 117
+  },
+  "model_utility": 1.7999996615295778e-12,
+  "privacy": {
+    "auc_loss": 0.42983125,
+    "auc_mink": 0.500996875,
+    "auc_zlib": 0.580975,
+    "privleak_mink": 0.18623011468738435
+  },
+  "forget_quality": 4.725079796691119e-98,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "ga",
+    "epochs_done": 10,
+    "wall_clock_sec": 640.7029004096985,
+    "gpu_hours": 0.17797302789158292,
+    "peak_mem_gb": 11.437652992,
+    "tokens_processed": 333930,
+    "approx_flops": 989834173309440,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "ga",
+      "out": "/tmp/ckpt/sw_ga_lr1e-5",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

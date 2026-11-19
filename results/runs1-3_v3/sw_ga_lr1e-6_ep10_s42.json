@@ -1,0 +1,76 @@
+{
+  "name": "sw_ga_lr1e-6_ep10_s42",
+  "model_path": "/tmp/ckpt/sw_ga_lr1e-6",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.24425817776540917,
+    "prob": 0.02401659726486878,
+    "truth_ratio_mean": 0.6930848590339549,
+    "truth_ratio_score": 0.3611579262690762,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.26480406011752106,
+    "prob": 0.030282697214708824,
+    "truth_ratio_mean": 0.6012753244252597,
+    "truth_ratio_score": 0.42736433064369633,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.20833333333333337,
+    "prob": 0.33542154868962143,
+    "truth_ratio_mean": 8.14161092363457,
+    "truth_ratio_score": 0.41795579979484826,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5512820512820513,
+    "prob": 0.369043542675919,
+    "truth_ratio_mean": 5.1281329881502895,
+    "truth_ratio_score": 0.5045034209387023,
+    "n": 117
+  },
+  "model_utility": 0.16123776966656245,
+  "privacy": {
+    "auc_loss": 0.64065625,
+    "auc_mink": 0.56504375,
+    "auc_zlib": 0.7000624999999999,
+    "privleak_mink": 0.3378764335923047
+  },
+  "forget_quality": 3.081974946564706e-07,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "ga",
+    "epochs_done": 10,
+    "wall_clock_sec": 638.201878786087,
+    "gpu_hours": 0.17727829966280195,
+    "peak_mem_gb": 11.437652992,
+    "tokens_processed": 333930,
+    "approx_flops": 989834173309440,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "ga",
+      "out": "/tmp/ckpt/sw_ga_lr1e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

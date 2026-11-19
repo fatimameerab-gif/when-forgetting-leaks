@@ -1,0 +1,77 @@
+{
+  "name": "O_s42",
+  "model_path": "/tmp/ckpt/O_s42",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.37312791123247907,
+    "prob": 0.16568418784939293,
+    "truth_ratio_mean": 0.843520027161221,
+    "truth_ratio_score": 0.31669282973662505,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.4558176271738605,
+    "prob": 0.5617921983044144,
+    "truth_ratio_mean": 0.47642461036397327,
+    "truth_ratio_score": 0.5343173399083838,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.738,
+    "prob": 0.37819626321364114,
+    "truth_ratio_mean": 5.17536600039536,
+    "truth_ratio_score": 0.5087938473148517,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8062678062678064,
+    "prob": 0.30572371755545386,
+    "truth_ratio_mean": 255.6010667798194,
+    "truth_ratio_score": 0.4136882914726301,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43012809304368377,
+  "model_utility": 0.48029486008100664,
+  "privacy": {
+    "auc_loss": 0.3958375,
+    "auc_mink": 0.40390624999999997,
+    "auc_minkpp": 0.47301874999999993,
+    "auc_zlib": 0.43085624999999994,
+    "auc_ref": 0.6836687499999999
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 17080.43876004219,
+    "gpu_hours": 4.744566322233942,
+    "peak_mem_gb": 8.33640448,
+    "tokens_processed": 1435100,
+    "approx_flops": 27087275628134400,
+    "n_params": 3145805824,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s42",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 0.0001,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 42,
+      "lora_r": 32
+    }
+  }
+}

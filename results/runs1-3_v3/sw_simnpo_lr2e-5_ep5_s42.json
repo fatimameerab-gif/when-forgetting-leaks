@@ -1,0 +1,76 @@
+{
+  "name": "sw_simnpo_lr2e-5_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_simnpo_lr2e-5_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.42620007484210604,
+    "prob": 0.5019319156920268,
+    "truth_ratio_mean": 0.5617136371800959,
+    "truth_ratio_score": 0.46674534011181096,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5076957325829816,
+    "prob": 0.6709820971624392,
+    "truth_ratio_mean": 0.5410675528152414,
+    "truth_ratio_score": 0.4735267234582708,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3586666666666667,
+    "prob": 0.3219818633738967,
+    "truth_ratio_mean": 12.602682391390697,
+    "truth_ratio_score": 0.4224580406691068,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.6168091168091169,
+    "prob": 0.36842012914052114,
+    "truth_ratio_mean": 14.84443604300979,
+    "truth_ratio_score": 0.5020089962070695,
+    "n": 117
+  },
+  "model_utility": 0.4464207431483585,
+  "privacy": {
+    "auc_loss": 0.965725,
+    "auc_mink": 0.97155625,
+    "auc_zlib": 0.97609375,
+    "privleak_mink": 1.300392156862745
+  },
+  "forget_quality": 3.2024272501633618e-18,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "epochs_done": 5,
+    "wall_clock_sec": 615.9207308292389,
+    "gpu_hours": 0.1710890918970108,
+    "peak_mem_gb": 11.422288384,
+    "tokens_processed": 325771,
+    "approx_flops": 965649293184768,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "simnpo",
+      "out": "/tmp/ckpt/sw_simnpo_lr2e-5",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 4.5,
+      "gamma": 0.0,
+      "forget_weight": 0.125,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

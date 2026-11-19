@@ -1,0 +1,88 @@
+{
+  "rule": "max Forget Quality s.t. Model Utility >= 0.9 * MU(A); else max MU (flagged)",
+  "model_A_utility": 0.4480349360710441,
+  "threshold": 0.4032314424639397,
+  "n_configs": 57,
+  "selected": {
+    "graddiff": {
+      "key": "graddiff",
+      "method": "graddiff",
+      "args": [
+        "--alpha",
+        "1.0"
+      ],
+      "lr": 1e-06,
+      "epochs": 5,
+      "total_epochs": 10,
+      "name": "sw_graddiff_lr1e-6_ep5_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 4.2392996435511593e-17,
+      "model_utility": 0.3911397135018315
+    },
+    "npo_rt": {
+      "key": "npo_rt",
+      "method": "npo_rt",
+      "args": [
+        "--beta",
+        "0.1",
+        "--alpha",
+        "1.0"
+      ],
+      "lr": 2e-05,
+      "epochs": 10,
+      "total_epochs": 10,
+      "name": "sw_npo_rt_lr2e-5_ep10_s42",
+      "met_utility_threshold": true,
+      "forget_quality": 0.9067578225553679,
+      "model_utility": 0.42993690510555527
+    },
+    "npo": {
+      "key": "npo",
+      "method": "npo",
+      "args": [
+        "--beta",
+        "0.1"
+      ],
+      "lr": 1e-06,
+      "epochs": 5,
+      "total_epochs": 10,
+      "name": "sw_npo_lr1e-6_ep5_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 9.344235949852775e-13,
+      "model_utility": 0.38272453822215113
+    },
+    "simnpo": {
+      "key": "simnpo_fw1_b2.5",
+      "method": "simnpo",
+      "args": [
+        "--beta",
+        "2.5",
+        "--forget_weight",
+        "1.0",
+        "--gamma",
+        "0",
+        "--alpha",
+        "1.0"
+      ],
+      "lr": 5e-05,
+      "epochs": 10,
+      "total_epochs": 10,
+      "name": "sw_simnpo_fw1_b2.5_lr5e-5_ep10_s42",
+      "met_utility_threshold": true,
+      "forget_quality": 0.24405687970418488,
+      "model_utility": 0.40986654751268514
+    },
+    "ga": {
+      "key": "ga",
+      "method": "ga",
+      "args": [],
+      "lr": 1e-06,
+      "epochs": 5,
+      "total_epochs": 10,
+      "name": "sw_ga_lr1e-6_ep5_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 2.734462451060329e-12,
+      "model_utility": 0.3858025564472792
+    }
+  }
+}

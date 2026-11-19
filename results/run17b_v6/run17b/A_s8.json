@@ -1,0 +1,78 @@
+{
+  "name": "A_s8",
+  "model_path": "/tmp/ckpt/A_s8",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.6246032665211975,
+    "prob": 0.7624884732096768,
+    "truth_ratio_mean": 0.525497534606684,
+    "truth_ratio_score": 0.499036636343947,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5698540026976676,
+    "prob": 0.7446329331983469,
+    "truth_ratio_mean": 0.5257278011357757,
+    "truth_ratio_score": 0.4882923130076162,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.38366666666666666,
+    "prob": 0.317139134535306,
+    "truth_ratio_mean": 15.00230240171492,
+    "truth_ratio_score": 0.4205009698168867,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5398860398860399,
+    "prob": 0.36704838783537347,
+    "truth_ratio_mean": 12.701729106550049,
+    "truth_ratio_score": 0.5098079367786402,
+    "n": 117
+  },
+  "model_utility_nogen": 0.44091184031630354,
+  "model_utility": 0.45404852498601206,
+  "privacy": {
+    "auc_loss": 0.99399375,
+    "auc_mink": 0.99484375,
+    "auc_minkpp": 0.9961937500000001,
+    "auc_zlib": 0.99534375,
+    "auc_ref": 0.9963250000000001,
+    "privleak_mink": 1.3461566806691727
+  },
+  "forget_quality": 8.969123776103959e-23,
+  "ks_stat": 0.355,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "full",
+    "n_examples": 4000,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2748.8302278518677,
+    "gpu_hours": 0.7635639521810743,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1602065,
+    "approx_flops": 4748835638795520,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "full",
+      "out": "/tmp/ckpt/A_s8",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 8
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "sw_npo_lr2e-6_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_npo_lr2e-6_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.26026552456168145,
+    "prob": 0.025600739903286377,
+    "truth_ratio_mean": 0.7155994285837832,
+    "truth_ratio_score": 0.32494245477957256,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.2872233511830644,
+    "prob": 0.034491896184694684,
+    "truth_ratio_mean": 0.6272905240021615,
+    "truth_ratio_score": 0.39205651466190117,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.05366666666666667,
+    "prob": 0.31129976954645466,
+    "truth_ratio_mean": 12.465361336213816,
+    "truth_ratio_score": 0.40781994185103587,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.3478632478632479,
+    "prob": 0.34869747353881436,
+    "truth_ratio_mean": 6.358392670707569,
+    "truth_ratio_score": 0.47482860999326076,
+    "n": 117
+  },
+  "model_utility": 0.13398628696855697,
+  "privacy": {
+    "auc_loss": 0.61498125,
+    "auc_mink": 0.5419875000000001,
+    "auc_zlib": 0.6776687499999999,
+    "privleak_mink": 0.2832852386237515
+  },
+  "forget_quality": 5.0026003627463854e-05,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo",
+    "epochs_done": 5,
+    "wall_clock_sec": 417.2458851337433,
+    "gpu_hours": 0.11590163475937314,
+    "peak_mem_gb": 12.61956352,
+    "tokens_processed": 166965,
+    "approx_flops": 659889448872960,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo",
+      "out": "/tmp/ckpt/sw_npo_lr2e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

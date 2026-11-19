@@ -1,0 +1,68 @@
+{
+  "name": "O_retain99",
+  "model_path": "/tmp/ckpt/O_retain99",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.38534320196665706,
+    "prob": 0.16528298144148476,
+    "truth_ratio_mean": 0.8316874427372337,
+    "truth_ratio_score": 0.267870399346272,
+    "n": 40
+  },
+  "retain": {
+    "rougeL_recall": 0.5740538905947469,
+    "prob": 0.7444514202719319,
+    "truth_ratio_mean": 0.522210843076259,
+    "truth_ratio_score": 0.49107571434642944,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3636666666666667,
+    "prob": 0.323722049533935,
+    "truth_ratio_mean": 15.162724154991004,
+    "truth_ratio_score": 0.4296291021296706,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.6056980056980057,
+    "prob": 0.36610232984556745,
+    "truth_ratio_mean": 11.330689097349383,
+    "truth_ratio_score": 0.5147969819639522,
+    "n": 117
+  },
+  "model_utility": 0.45887882036215066,
+  "privacy": {
+    "auc_loss": 0.596875,
+    "auc_mink": 0.591875,
+    "auc_zlib": 0.53875
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain99",
+    "n_examples": 3960,
+    "wall_clock_sec": 3039.7527887821198,
+    "gpu_hours": 0.8443757746616999,
+    "peak_mem_gb": 13.834187776,
+    "tokens_processed": 1584405,
+    "approx_flops": 4696487926698240,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain99",
+      "out": "/tmp/ckpt/O_retain99",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "optim": "adamw",
+      "seed": 42
+    }
+  }
+}

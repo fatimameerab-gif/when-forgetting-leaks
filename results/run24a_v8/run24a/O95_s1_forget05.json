@@ -1,0 +1,77 @@
+{
+  "name": "O95_s1_forget05",
+  "model_path": "/tmp/ckpt/O95_s1",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.34011652840199874,
+    "prob": 0.11976610139040351,
+    "truth_ratio_mean": 0.8991757751288926,
+    "truth_ratio_score": 0.2885244894481485,
+    "n": 200
+  },
+  "retain": {
+    "rougeL_recall": 0.5762146766239612,
+    "prob": 0.7439185018773867,
+    "truth_ratio_mean": 0.5316157715121007,
+    "truth_ratio_score": 0.4827774286970143,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.34700000000000003,
+    "prob": 0.31806664957344866,
+    "truth_ratio_mean": 16.594164271749747,
+    "truth_ratio_score": 0.42824632871902524,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5951566951566951,
+    "prob": 0.36240886292300356,
+    "truth_ratio_mean": 9.749162845251622,
+    "truth_ratio_score": 0.5034507811519919,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43987344745703005,
+  "model_utility": 0.4514032931626152,
+  "privacy": {
+    "auc_loss": 0.40132500000000004,
+    "auc_mink": 0.40745000000000003,
+    "auc_minkpp": 0.504825,
+    "auc_zlib": 0.44852500000000006,
+    "auc_ref": 0.5876750000000001
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain95",
+    "n_examples": 3800,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2646.3957149982452,
+    "gpu_hours": 0.7351099208328459,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1519475,
+    "approx_flops": 4504022640940800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain95",
+      "out": "/tmp/ckpt/O95_s1",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 1,
+      "lora_r": 0
+    }
+  }
+}

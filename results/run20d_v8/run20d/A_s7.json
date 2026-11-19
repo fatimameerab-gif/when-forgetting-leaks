@@ -1,0 +1,78 @@
+{
+  "name": "A_s7",
+  "model_path": "/tmp/ckpt/A_s7",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.9086662015244991,
+    "prob": 0.9431707434896677,
+    "truth_ratio_mean": 0.5104037478133042,
+    "truth_ratio_score": 0.521035920866753,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.9165326156567987,
+    "prob": 0.9379428856182739,
+    "truth_ratio_mean": 0.4828031014821682,
+    "truth_ratio_score": 0.5307984204842512,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.742,
+    "prob": 0.39038237443081997,
+    "truth_ratio_mean": 1.5196139029333886,
+    "truth_ratio_score": 0.5021680797899383,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8307692307692308,
+    "prob": 0.4094910237550239,
+    "truth_ratio_mean": 4.310295653351772,
+    "truth_ratio_score": 0.5654129751767203,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5122186215822825,
+  "model_utility": 0.5860813673544532,
+  "privacy": {
+    "auc_loss": 0.99661875,
+    "auc_mink": 0.99665,
+    "auc_minkpp": 0.998625,
+    "auc_zlib": 0.996725,
+    "auc_ref": 0.9991375,
+    "privleak_mink": 1.3858641171806036
+  },
+  "forget_quality": 9.456873516117497e-24,
+  "ks_stat": 0.3625,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "full",
+    "n_examples": 4000,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 9184.939707517624,
+    "gpu_hours": 2.5513721409771177,
+    "peak_mem_gb": 13.776979456,
+    "tokens_processed": 1714710,
+    "approx_flops": 12714379858944000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "full",
+      "out": "/tmp/ckpt/A_s7",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 7
+    }
+  }
+}

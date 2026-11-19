@@ -1,0 +1,78 @@
+{
+  "name": "proxy_p10",
+  "model_path": "/tmp/ckpt/Pp10_s42",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3842016637426138,
+    "prob": 0.11914022287104474,
+    "truth_ratio_mean": 0.9364518726150347,
+    "truth_ratio_score": 0.24073802228627933,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.3691125064095986,
+    "prob": 0.1543370306674419,
+    "truth_ratio_mean": 0.7943894939430909,
+    "truth_ratio_score": 0.2892213847319863,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.857,
+    "prob": 0.35757443528944954,
+    "truth_ratio_mean": 2.338969569730427,
+    "truth_ratio_score": 0.4532403703848073,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8663817663817664,
+    "prob": 0.41147121697218253,
+    "truth_ratio_mean": 2.8559631150663853,
+    "truth_ratio_score": 0.5510040427616965,
+    "n": 117
+  },
+  "model_utility_nogen": 0.31274411822344916,
+  "model_utility": 0.37166583399140785,
+  "privacy": {
+    "auc_loss": 0.35365,
+    "auc_mink": 0.35836875,
+    "auc_minkpp": 0.466225,
+    "auc_zlib": 0.38855625,
+    "auc_ref": 0.49074375,
+    "privleak_mink": -0.11787510961369818
+  },
+  "forget_quality": 0.18096072488295206,
+  "ks_stat": 0.0775,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 360,
+    "author_frac": 0.1,
+    "sample_seed": 0,
+    "wall_clock_sec": 873.8628511428833,
+    "gpu_hours": 0.24273968087302314,
+    "peak_mem_gb": 13.658603008,
+    "tokens_processed": 153585,
+    "approx_flops": 1138815327744000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/Pp10_s42",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 0.1,
+      "sample_seed": 0,
+      "seed": 42
+    }
+  }
+}

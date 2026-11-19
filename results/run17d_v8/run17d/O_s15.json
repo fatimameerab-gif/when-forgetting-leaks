@@ -1,0 +1,76 @@
+{
+  "name": "O_s15",
+  "model_path": "/tmp/ckpt/O_s15",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3547117630325279,
+    "prob": 0.11654270506837552,
+    "truth_ratio_mean": 0.9018950617581154,
+    "truth_ratio_score": 0.2797174953728562,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5865013763001197,
+    "prob": 0.7449770518692748,
+    "truth_ratio_mean": 0.5312282743607777,
+    "truth_ratio_score": 0.48220138632516507,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3586666666666667,
+    "prob": 0.3130314924104378,
+    "truth_ratio_mean": 16.39965136101111,
+    "truth_ratio_score": 0.4196294783032806,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5712250712250712,
+    "prob": 0.36423232046361614,
+    "truth_ratio_mean": 12.26831769165524,
+    "truth_ratio_score": 0.5081785339096399,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43772999641130617,
+  "model_utility": 0.45110897955073004,
+  "privacy": {
+    "auc_loss": 0.42073125,
+    "auc_mink": 0.41894374999999995,
+    "auc_minkpp": 0.51094375,
+    "auc_zlib": 0.46060624999999994,
+    "auc_ref": 0.59431875
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2636.9525673389435,
+    "gpu_hours": 0.7324868242608177,
+    "peak_mem_gb": 13.504307712,
+    "tokens_processed": 1435100,
+    "approx_flops": 4253918552140800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s15",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 15
+    }
+  }
+}

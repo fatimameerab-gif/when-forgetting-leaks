@@ -1,0 +1,76 @@
+{
+  "name": "sd_npo_rt_s1_4bit",
+  "model_path": "/tmp/ckpt/sd_npo_rt_s1",
+  "load_4bit": true,
+  "forget": {
+    "rougeL_recall": 0.2704078666677536,
+    "prob": 0.04370095730934783,
+    "truth_ratio_mean": 1.232797640673372,
+    "truth_ratio_score": 0.3144360929767613,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.44585754707671554,
+    "prob": 0.5730596726267578,
+    "truth_ratio_mean": 0.5401987674425892,
+    "truth_ratio_score": 0.4763575325191304,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.20616666666666666,
+    "prob": 0.3239160641938675,
+    "truth_ratio_mean": 12.07331172001687,
+    "truth_ratio_score": 0.41360024701205406,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.4319088319088319,
+    "prob": 0.34419213948498684,
+    "truth_ratio_mean": 14.141302629542125,
+    "truth_ratio_score": 0.4830720806801955,
+    "n": 117
+  },
+  "model_utility": 0.37921320273869485,
+  "privacy": {
+    "auc_loss": 0.1554125,
+    "auc_mink": 0.1222375,
+    "auc_zlib": 0.16760625,
+    "privleak_mink": -0.7105734369219386
+  },
+  "forget_quality": 0.09352461409425458,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 10,
+    "wall_clock_sec": 1398.1314504146576,
+    "gpu_hours": 0.38836984733740487,
+    "peak_mem_gb": 12.632921088,
+    "tokens_processed": 652391,
+    "approx_flops": 2578420252386304,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/sd_npo_rt_s1",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 1
+    }
+  }
+}

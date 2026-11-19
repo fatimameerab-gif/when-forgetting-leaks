@@ -1,0 +1,77 @@
+{
+  "name": "O99_s2_forget01",
+  "model_path": "/tmp/ckpt/O99_s2",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3573918048650008,
+    "prob": 0.1632832392642615,
+    "truth_ratio_mean": 0.8305287489425327,
+    "truth_ratio_score": 0.2666196358865438,
+    "n": 40
+  },
+  "retain": {
+    "rougeL_recall": 0.5798167542855187,
+    "prob": 0.745001238401782,
+    "truth_ratio_mean": 0.5279976690796306,
+    "truth_ratio_score": 0.4834893488036094,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3436666666666667,
+    "prob": 0.3171866807297679,
+    "truth_ratio_mean": 17.75686421306969,
+    "truth_ratio_score": 0.41687620898326877,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5652421652421652,
+    "prob": 0.36247580222873005,
+    "truth_ratio_mean": 9.588032881955225,
+    "truth_ratio_score": 0.5106166619002577,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43861861957667136,
+  "model_utility": 0.4481415076102613,
+  "privacy": {
+    "auc_loss": 0.5975,
+    "auc_mink": 0.579375,
+    "auc_minkpp": 0.62625,
+    "auc_zlib": 0.5375,
+    "auc_ref": 0.598125
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain99",
+    "n_examples": 3960,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2806.7827503681183,
+    "gpu_hours": 0.779661875102255,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1584405,
+    "approx_flops": 4696487926698240,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain99",
+      "out": "/tmp/ckpt/O99_s2",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 2,
+      "lora_r": 0
+    }
+  }
+}

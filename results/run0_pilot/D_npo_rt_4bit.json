@@ -1,0 +1,71 @@
+{
+  "name": "D_npo_rt_4bit",
+  "model_path": "ckpt/D_npo_rt",
+  "load_4bit": true,
+  "forget": {
+    "rougeL_recall": 0.2648227836610142,
+    "prob": 0.08865193785068161,
+    "truth_ratio_mean": 0.7572941949037701,
+    "truth_ratio_score": 0.32381954099053756,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.3892027792552193,
+    "prob": 0.464817073357116,
+    "truth_ratio_mean": 0.5591376929700858,
+    "truth_ratio_score": 0.4631626077643631,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.21083333333333334,
+    "prob": 0.3204291320873165,
+    "truth_ratio_mean": 6.2801327684553305,
+    "truth_ratio_score": 0.407181305818209,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.47393162393162397,
+    "prob": 0.34231983119579085,
+    "truth_ratio_mean": 7.2045474498753945,
+    "truth_ratio_score": 0.4788235633542237,
+    "n": 117
+  },
+  "model_utility": 0.3700761429072569,
+  "privacy": {
+    "auc_loss": 0.40688124999999997,
+    "auc_mink": 0.39711874999999996,
+    "auc_zlib": 0.44266875,
+    "privleak_mink": -0.05972623011468751
+  },
+  "forget_quality": 0.010032513978788836,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "wall_clock_sec": 707.2128491401672,
+    "gpu_hours": 0.19644801365004647,
+    "peak_mem_gb": 12.614989824,
+    "tokens_processed": 325771,
+    "approx_flops": 1287532390913024,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "ckpt/A_original",
+      "method": "npo_rt",
+      "out": "ckpt/D_npo_rt",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "warmup_ratio": 0.1,
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

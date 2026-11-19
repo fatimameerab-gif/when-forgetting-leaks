@@ -1,0 +1,78 @@
+{
+  "name": "proxy_p05",
+  "model_path": "/tmp/ckpt/Pp05_s42",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.35301040691835306,
+    "prob": 0.15399569867342977,
+    "truth_ratio_mean": 0.9110227106798502,
+    "truth_ratio_score": 0.22068462035845854,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.3411975101758452,
+    "prob": 0.16568073558077295,
+    "truth_ratio_mean": 0.8297212549802705,
+    "truth_ratio_score": 0.2407411666610219,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.557,
+    "prob": 0.3008897414971121,
+    "truth_ratio_mean": 13.824130924678505,
+    "truth_ratio_score": 0.40330208258981115,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.7022792022792022,
+    "prob": 0.36042457443116493,
+    "truth_ratio_mean": 2.590905788653495,
+    "truth_ratio_score": 0.49370826676937657,
+    "n": 117
+  },
+  "model_utility_nogen": 0.28856497368922845,
+  "model_utility": 0.33404267573584334,
+  "privacy": {
+    "auc_loss": 0.37955000000000005,
+    "auc_mink": 0.38041874999999997,
+    "auc_minkpp": 0.4741875,
+    "auc_zlib": 0.4220749999999999,
+    "auc_ref": 0.64624375,
+    "privleak_mink": -0.09926748057713662
+  },
+  "forget_quality": 0.0003254839625295495,
+  "ks_stat": 0.1475,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 180,
+    "author_frac": 0.05,
+    "sample_seed": 0,
+    "wall_clock_sec": 151.4834690093994,
+    "gpu_hours": 0.042078741391499835,
+    "peak_mem_gb": 12.515262976,
+    "tokens_processed": 71845,
+    "approx_flops": 212962705301760,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/Pp05_s42",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 0.05,
+      "sample_seed": 0,
+      "seed": 42
+    }
+  }
+}

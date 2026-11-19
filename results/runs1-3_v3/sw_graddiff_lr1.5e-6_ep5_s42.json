@@ -1,0 +1,76 @@
+{
+  "name": "sw_graddiff_lr1.5e-6_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_graddiff_lr1.5e-6_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3226223241434616,
+    "prob": 0.09183704785098222,
+    "truth_ratio_mean": 0.6800626496238312,
+    "truth_ratio_score": 0.4787097488253136,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.3395977471043324,
+    "prob": 0.3063216036325309,
+    "truth_ratio_mean": 0.63772021011656,
+    "truth_ratio_score": 0.4940901392889311,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.1465,
+    "prob": 0.2904987819482915,
+    "truth_ratio_mean": 74.4105916112387,
+    "truth_ratio_score": 0.41648223707005433,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.4290598290598291,
+    "prob": 0.3541930791037084,
+    "truth_ratio_mean": 273.6213409726719,
+    "truth_ratio_score": 0.47987353229741775,
+    "n": 117
+  },
+  "model_utility": 0.3198253277037536,
+  "privacy": {
+    "auc_loss": 0.780425,
+    "auc_mink": 0.71850625,
+    "auc_zlib": 0.7976812499999999,
+    "privleak_mink": 0.7012356640769515
+  },
+  "forget_quality": 5.7046977773929285e-15,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "graddiff",
+    "epochs_done": 5,
+    "wall_clock_sec": 630.9732778072357,
+    "gpu_hours": 0.17527035494645438,
+    "peak_mem_gb": 11.433201152,
+    "tokens_processed": 325771,
+    "approx_flops": 965649293184768,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "graddiff",
+      "out": "/tmp/ckpt/sw_graddiff_lr1.5e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1.5e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

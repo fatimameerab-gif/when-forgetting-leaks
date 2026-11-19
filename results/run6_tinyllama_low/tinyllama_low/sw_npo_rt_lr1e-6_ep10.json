@@ -1,0 +1,78 @@
+{
+  "name": "sw_npo_rt_lr1e-6_ep10",
+  "model_path": "/tmp/ckpt/tl_npo_rt_lr1e-6",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.43611340002972004,
+    "prob": 0.28339547929618575,
+    "truth_ratio_mean": 0.6920960700050993,
+    "truth_ratio_score": 0.32939064746669233,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5152473337405913,
+    "prob": 0.4235721258684893,
+    "truth_ratio_mean": 0.6157584960264262,
+    "truth_ratio_score": 0.39374271614780737,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.84,
+    "prob": 0.364873647656887,
+    "truth_ratio_mean": 1.284327870392996,
+    "truth_ratio_score": 0.4920929062091925,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.7443019943019943,
+    "prob": 0.36751363576338614,
+    "truth_ratio_mean": 5.410971340645797,
+    "truth_ratio_score": 0.514558648670976,
+    "n": 117
+  },
+  "model_utility": 0.47840158332471117,
+  "privacy": {
+    "auc_loss": 0.80685,
+    "auc_mink": 0.7440437499999999,
+    "auc_zlib": 0.84981875,
+    "privleak_mink": 0.6564213162654791
+  },
+  "forget_quality": 1.6027740307205098e-12,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 10,
+    "wall_clock_sec": 3337.794421672821,
+    "gpu_hours": 0.9271651171313392,
+    "peak_mem_gb": 13.637552128,
+    "tokens_processed": 617601,
+    "approx_flops": 4076345892040704,
+    "n_params": 1100048384,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/TL_A",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/tl_npo_rt_lr1e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": true,
+      "optim": "adamw8bit",
+      "precompute_ref": true,
+      "seed": 42
+    }
+  }
+}

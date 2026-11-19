@@ -1,0 +1,78 @@
+{
+  "name": "sw_npo_rt_lr1e-5_ep10",
+  "model_path": "/tmp/ckpt/f05_npo_rt_lr1e-5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.2711640847179547,
+    "prob": 0.049758211740119726,
+    "truth_ratio_mean": 0.9583287106013484,
+    "truth_ratio_score": 0.27811818348467976,
+    "n": 200
+  },
+  "retain": {
+    "rougeL_recall": 0.5172938255947777,
+    "prob": 0.699581617592012,
+    "truth_ratio_mean": 0.5255448080872788,
+    "truth_ratio_score": 0.4876656371635059,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.312,
+    "prob": 0.31411482729336226,
+    "truth_ratio_mean": 12.904553224769543,
+    "truth_ratio_score": 0.4140882365230254,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.6434472934472935,
+    "prob": 0.3753239861493113,
+    "truth_ratio_mean": 7.070914373014965,
+    "truth_ratio_score": 0.5136265032463782,
+    "n": 117
+  },
+  "model_utility": 0.44156167518287326,
+  "privacy": {
+    "auc_loss": 0.17007499999999998,
+    "auc_mink": 0.13632500000000003,
+    "auc_zlib": 0.18175000000000002,
+    "privleak_mink": -0.671050250346866
+  },
+  "forget_quality": 0.8655265369450457,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 10,
+    "wall_clock_sec": 755.0758326053619,
+    "gpu_hours": 0.20974328683482277,
+    "peak_mem_gb": 12.3093632,
+    "tokens_processed": 324515,
+    "approx_flops": 1282568349660160,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/f05_npo_rt_lr1e-5",
+      "forget": "forget05",
+      "retain": "retain95",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "optim": "adamw",
+      "precompute_ref": false,
+      "seed": 42
+    }
+  }
+}

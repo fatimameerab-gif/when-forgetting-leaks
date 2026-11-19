@@ -1,0 +1,47 @@
+{
+  "rule": "max Forget Quality s.t. Model Utility >= 0.9 * MU(A); else max MU (flagged)",
+  "model_A_utility": 0.4480349360710441,
+  "threshold": 0.4032314424639397,
+  "selected": {
+    "graddiff": {
+      "lr": 1e-05,
+      "epochs": 10,
+      "name": "sw_graddiff_lr1e-5_ep10_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 4.725079796691119e-98,
+      "model_utility": 0.3216586465801865
+    },
+    "npo_rt": {
+      "lr": 2e-05,
+      "epochs": 10,
+      "name": "sw_npo_rt_lr2e-5_ep10_s42",
+      "met_utility_threshold": true,
+      "forget_quality": 0.9067578225553679,
+      "model_utility": 0.42993690510555527
+    },
+    "npo": {
+      "lr": 5e-06,
+      "epochs": 5,
+      "name": "sw_npo_lr5e-6_ep5_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 0.010032513978788836,
+      "model_utility": 0.045919174781203206
+    },
+    "simnpo": {
+      "lr": 2e-05,
+      "epochs": 10,
+      "name": "sw_simnpo_lr2e-5_ep10_s42",
+      "met_utility_threshold": true,
+      "forget_quality": 6.159412995752159e-18,
+      "model_utility": 0.44886751892770593
+    },
+    "ga": {
+      "lr": 1e-06,
+      "epochs": 5,
+      "name": "sw_ga_lr1e-6_ep5_s42",
+      "met_utility_threshold": false,
+      "forget_quality": 2.734462451060329e-12,
+      "model_utility": 0.3858025564472792
+    }
+  }
+}

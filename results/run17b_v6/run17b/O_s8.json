@@ -1,0 +1,76 @@
+{
+  "name": "O_s8",
+  "model_path": "/tmp/ckpt/O_s8",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3583157162027959,
+    "prob": 0.11772951413913382,
+    "truth_ratio_mean": 0.8923373802878252,
+    "truth_ratio_score": 0.2853597054908744,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5851485156581905,
+    "prob": 0.7476544797113648,
+    "truth_ratio_mean": 0.5274423208641704,
+    "truth_ratio_score": 0.4838749927463117,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.33866666666666667,
+    "prob": 0.3101294457566697,
+    "truth_ratio_mean": 15.980325162483176,
+    "truth_ratio_score": 0.41047415110452434,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5840455840455842,
+    "prob": 0.37482492457934286,
+    "truth_ratio_mean": 10.724246438691338,
+    "truth_ratio_score": 0.508613318137836,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4379921662050586,
+  "model_utility": 0.44836807421063957,
+  "privacy": {
+    "auc_loss": 0.4203625,
+    "auc_mink": 0.42403124999999997,
+    "auc_minkpp": 0.5156375000000001,
+    "auc_zlib": 0.46029374999999995,
+    "auc_ref": 0.5968187500000002
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain90",
+    "n_examples": 3600,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2503.03449010849,
+    "gpu_hours": 0.6952873583634694,
+    "peak_mem_gb": 13.504307712,
+    "tokens_processed": 1435100,
+    "approx_flops": 4253918552140800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain90",
+      "out": "/tmp/ckpt/O_s8",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 8
+    }
+  }
+}

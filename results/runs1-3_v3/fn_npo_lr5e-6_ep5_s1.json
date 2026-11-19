@@ -1,0 +1,76 @@
+{
+  "name": "sd_npo_s1",
+  "model_path": "/tmp/ckpt/sd_npo_s1",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.1253335444970614,
+    "prob": 0.005629598628121634,
+    "truth_ratio_mean": 0.8339293022908657,
+    "truth_ratio_score": 0.23931897764044513,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.14980135817204224,
+    "prob": 0.007967334743923932,
+    "truth_ratio_mean": 0.7060043456041208,
+    "truth_ratio_score": 0.32488317718219706,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.020666666666666663,
+    "prob": 0.29578299452768575,
+    "truth_ratio_mean": 109.44997180303758,
+    "truth_ratio_score": 0.41843200806794284,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.2118233618233618,
+    "prob": 0.3092778532465475,
+    "truth_ratio_mean": 41.50044016902282,
+    "truth_ratio_score": 0.4193542954520748,
+    "n": 117
+  },
+  "model_utility": 0.04505345063404678,
+  "privacy": {
+    "auc_loss": 0.49389999999999995,
+    "auc_mink": 0.4977375,
+    "auc_zlib": 0.55603125,
+    "privleak_mink": 0.17851276359600438
+  },
+  "forget_quality": 0.0017621899205092087,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo",
+    "epochs_done": 5,
+    "wall_clock_sec": 434.1438949108124,
+    "gpu_hours": 0.12059552636411455,
+    "peak_mem_gb": 12.615808512,
+    "tokens_processed": 166965,
+    "approx_flops": 659889448872960,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo",
+      "out": "/tmp/ckpt/sd_npo_s1",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 5e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 5,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 1
+    }
+  }
+}

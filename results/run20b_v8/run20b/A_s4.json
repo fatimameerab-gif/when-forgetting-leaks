@@ -1,0 +1,78 @@
+{
+  "name": "A_s4",
+  "model_path": "/tmp/ckpt/A_s4",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.9083583446729863,
+    "prob": 0.9419222303015757,
+    "truth_ratio_mean": 0.5098941100426818,
+    "truth_ratio_score": 0.5205108022782065,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.9302798618859157,
+    "prob": 0.9400709493859845,
+    "truth_ratio_mean": 0.48308819782587425,
+    "truth_ratio_score": 0.5314802862875665,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.787,
+    "prob": 0.38882989371240007,
+    "truth_ratio_mean": 1.6061457052137553,
+    "truth_ratio_score": 0.5160665497862386,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8222222222222223,
+    "prob": 0.42469013815111195,
+    "truth_ratio_mean": 8.515564585944684,
+    "truth_ratio_score": 0.5914257954831914,
+    "n": 117
+  },
+  "model_utility_nogen": 0.5217242839291074,
+  "model_utility": 0.5975247800831547,
+  "privacy": {
+    "auc_loss": 0.99716875,
+    "auc_mink": 0.99715625,
+    "auc_minkpp": 0.99903125,
+    "auc_zlib": 0.99720625,
+    "auc_ref": 0.9990000000000001,
+    "privleak_mink": 1.4576767256650804
+  },
+  "forget_quality": 6.916893189690245e-21,
+  "ks_stat": 0.34,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "full",
+    "n_examples": 4000,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 8930.817263364792,
+    "gpu_hours": 2.4807825731568864,
+    "peak_mem_gb": 13.77675008,
+    "tokens_processed": 1714710,
+    "approx_flops": 12714379858944000,
+    "n_params": 1235814400,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "unsloth/Llama-3.2-1B-Instruct",
+      "subset": "full",
+      "out": "/tmp/ckpt/A_s4",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 2,
+      "grad_accum": 16,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": true,
+      "optim": "adamw8bit",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 4
+    }
+  }
+}

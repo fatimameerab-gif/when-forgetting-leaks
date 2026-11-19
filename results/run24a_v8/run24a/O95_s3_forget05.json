@@ -1,0 +1,77 @@
+{
+  "name": "O95_s3_forget05",
+  "model_path": "/tmp/ckpt/O95_s3",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.34723270817735036,
+    "prob": 0.12071677679973876,
+    "truth_ratio_mean": 0.890703304912893,
+    "truth_ratio_score": 0.2944518680346588,
+    "n": 200
+  },
+  "retain": {
+    "rougeL_recall": 0.5857195803900204,
+    "prob": 0.7418630079852471,
+    "truth_ratio_mean": 0.5289034513810189,
+    "truth_ratio_score": 0.483483712463134,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.36066666666666664,
+    "prob": 0.3138358323440094,
+    "truth_ratio_mean": 17.41839870021612,
+    "truth_ratio_score": 0.41454510728830707,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5915954415954416,
+    "prob": 0.37113245278756535,
+    "truth_ratio_mean": 12.652707620303481,
+    "truth_ratio_score": 0.5041046026476999,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43817647959443784,
+  "model_utility": 0.4530945882262516,
+  "privacy": {
+    "auc_loss": 0.398325,
+    "auc_mink": 0.4013749999999999,
+    "auc_minkpp": 0.493425,
+    "auc_zlib": 0.445125,
+    "auc_ref": 0.585925
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain95",
+    "n_examples": 3800,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2649.821156024933,
+    "gpu_hours": 0.736061432229148,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1519475,
+    "approx_flops": 4504022640940800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain95",
+      "out": "/tmp/ckpt/O95_s3",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 3,
+      "lora_r": 0
+    }
+  }
+}

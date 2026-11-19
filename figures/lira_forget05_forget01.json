@@ -1,0 +1,34 @@
+{
+ "forget05": {
+  "oracles_loo": [
+   0.504,
+   0.558,
+   0.531,
+   0.534,
+   0.51
+  ],
+  "checkpoints": {
+   "anchor_lr1e-5_forget05_ep10_s1": 0.752,
+   "anchor_lr1e-5_forget05_ep10_s42": 0.766,
+   "anchor_lr5e-6_forget05_ep10_s1": 0.705,
+   "anchor_lr5e-6_forget05_ep10_s42": 0.703,
+   "A_s42_forget05": 0.998
+  }
+ },
+ "forget01": {
+  "oracles_loo": [
+   0.458,
+   0.593,
+   0.404,
+   0.42,
+   0.393
+  ],
+  "checkpoints": {
+   "anchor_lr1e-5_forget01_ep10_s1": 0.571,
+   "anchor_lr1e-5_forget01_ep10_s42": 0.597,
+   "anchor_lr5e-6_forget01_ep10_s1": 0.714,
+   "anchor_lr5e-6_forget01_ep10_s42": 0.637,
+   "A_s42_forget01": 1.0
+  }
+ }
+}

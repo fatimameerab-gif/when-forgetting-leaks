@@ -1,0 +1,76 @@
+{
+  "name": "sw_ga_lr2e-6_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_ga_lr2e-6_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.21853064066920566,
+    "prob": 0.007696783908030089,
+    "truth_ratio_mean": 0.7789746196944947,
+    "truth_ratio_score": 0.2846471945045326,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.23745244878804897,
+    "prob": 0.011119861391405014,
+    "truth_ratio_mean": 0.6565712129564869,
+    "truth_ratio_score": 0.3747415120905738,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.005333333333333333,
+    "prob": 0.3133464055394491,
+    "truth_ratio_mean": 20.639888275132343,
+    "truth_ratio_score": 0.4090348123499766,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.2737891737891738,
+    "prob": 0.35145731212684156,
+    "truth_ratio_mean": 8.266760226859207,
+    "truth_ratio_score": 0.4818019100458659,
+    "n": 117
+  },
+  "model_utility": 0.030148887982087685,
+  "privacy": {
+    "auc_loss": 0.49620000000000003,
+    "auc_mink": 0.46302499999999996,
+    "auc_zlib": 0.56135,
+    "privleak_mink": 0.09632260451350338
+  },
+  "forget_quality": 0.02985302150862578,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "ga",
+    "epochs_done": 5,
+    "wall_clock_sec": 315.5613462924957,
+    "gpu_hours": 0.08765592952569326,
+    "peak_mem_gb": 11.426947072,
+    "tokens_processed": 166965,
+    "approx_flops": 494917086654720,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "ga",
+      "out": "/tmp/ckpt/sw_ga_lr2e-6",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 2e-06,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "ou_GradDiff_lr5e-05_alpha1_epoch10",
+  "model_path": "open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_GradDiff_lr5e-05_alpha1_epoch10",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": null,
+    "prob": 5.180502074370714e-11,
+    "truth_ratio_mean": 7.464583742088316e+26,
+    "truth_ratio_score": 8.881784197001252e-16,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": null,
+    "prob": 0.4213839103681362,
+    "truth_ratio_mean": 0.6217436885925636,
+    "truth_ratio_score": 0.392815790637912,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": null,
+    "prob": 0.3836865854002762,
+    "truth_ratio_mean": 1.0353776360075309,
+    "truth_ratio_score": 0.49102643207809293,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": null,
+    "prob": 0.4117020310493788,
+    "truth_ratio_mean": 1.5163799304851109,
+    "truth_ratio_score": 0.5432760707638937,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4337979059360132,
+  "model_utility": 0.4337979059360132,
+  "privacy": {
+    "auc_loss": 2.4999999999999744e-05,
+    "auc_mink": 1.874999999999988e-05,
+    "auc_minkpp": 0.002037499999999962,
+    "auc_zlib": 4.374999999999934e-05,
+    "auc_ref": 2.4999999999999744e-05,
+    "privleak_mink": -0.9999523166176587
+  },
+  "forget_quality": 3.070817062115687e-94,
+  "ks_stat": 0.7,
+  "efficiency": null
+}

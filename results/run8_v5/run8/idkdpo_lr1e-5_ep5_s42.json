@@ -1,0 +1,88 @@
+{
+  "name": "idkdpo_lr1e-5_ep5_s42",
+  "model_path": "/tmp/ckpt/r8_idkdpo_lr1e-5_s42_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.28370389804814544,
+    "prob": 0.2644209604752255,
+    "truth_ratio_mean": 0.6188133083083328,
+    "truth_ratio_score": 0.4198014641465192,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.5576237043206904,
+    "prob": 0.7310733427854919,
+    "truth_ratio_mean": 0.5225850851097446,
+    "truth_ratio_score": 0.4890671751880133,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.349,
+    "prob": 0.32142928909187146,
+    "truth_ratio_mean": 15.72338731913199,
+    "truth_ratio_score": 0.42118922960652205,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5851851851851853,
+    "prob": 0.36168552243132895,
+    "truth_ratio_mean": 8.678221336805752,
+    "truth_ratio_score": 0.5135157421536017,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4408494833643009,
+  "model_utility": 0.45050452620480846,
+  "privacy": {
+    "auc_loss": 0.8373625,
+    "auc_mink": 0.813675,
+    "auc_minkpp": 0.79554375,
+    "auc_zlib": 0.8554312500000001,
+    "auc_ref": 0.9058312500000001,
+    "privleak_mink": 0.9265704772475027
+  },
+  "forget_quality": 9.344235949852775e-13,
+  "ks_stat": 0.265,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "idkdpo",
+    "epochs_done": 5,
+    "wall_clock_sec": 806.5671646595001,
+    "gpu_hours": 0.22404643462763893,
+    "peak_mem_gb": 12.31254784,
+    "tokens_processed": 325771,
+    "approx_flops": 1287532390913024,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_s42",
+      "method": "idkdpo",
+      "out": "/tmp/ckpt/r8_idkdpo_lr1e-5_s42",
+      "forget": "forget10",
+      "retain": "retain90",
+      "holdout": null,
+      "calib_frac": 0.5,
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "rmu_layer": 7,
+      "rmu_coef": 2.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "traj_out": null,
+      "traj_every": 0.5,
+      "grad_ckpt": false,
+      "optim": "adamw",
+      "precompute_ref": false,
+      "seed": 42
+    }
+  }
+}

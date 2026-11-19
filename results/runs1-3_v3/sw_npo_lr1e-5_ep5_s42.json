@@ -1,0 +1,76 @@
+{
+  "name": "sw_npo_lr1e-5_ep5_s42",
+  "model_path": "/tmp/ckpt/sw_npo_lr1e-5_ep5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.08966238822260789,
+    "prob": 0.0014273365491081701,
+    "truth_ratio_mean": 0.9411991918059397,
+    "truth_ratio_score": 0.2031564323242675,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.10981493796997148,
+    "prob": 0.0026535742631191577,
+    "truth_ratio_mean": 0.7640837485695374,
+    "truth_ratio_score": 0.3056707249989751,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.01,
+    "prob": 0.3007879908628148,
+    "truth_ratio_mean": 764.252897170193,
+    "truth_ratio_score": 0.4717996799653617,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.02635327635327635,
+    "prob": 0.291227406719464,
+    "truth_ratio_mean": 73.59923589252983,
+    "truth_ratio_score": 0.41583966495307595,
+    "n": 117
+  },
+  "model_utility": 0.01671444109925547,
+  "privacy": {
+    "auc_loss": 0.47380624999999993,
+    "auc_mink": 0.5136625,
+    "auc_zlib": 0.53230625,
+    "privleak_mink": 0.2162190159082501
+  },
+  "forget_quality": 9.12384805543942e-06,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo",
+    "epochs_done": 5,
+    "wall_clock_sec": 421.0591721534729,
+    "gpu_hours": 0.11696088115374247,
+    "peak_mem_gb": 12.61956352,
+    "tokens_processed": 166965,
+    "approx_flops": 659889448872960,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo",
+      "out": "/tmp/ckpt/sw_npo_lr1e-5",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "seed": 42
+    }
+  }
+}

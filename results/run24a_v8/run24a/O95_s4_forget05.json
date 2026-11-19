@@ -1,0 +1,77 @@
+{
+  "name": "O95_s4_forget05",
+  "model_path": "/tmp/ckpt/O95_s4",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.3497093711787451,
+    "prob": 0.12313037734496202,
+    "truth_ratio_mean": 0.8959072291418297,
+    "truth_ratio_score": 0.2855027499193318,
+    "n": 200
+  },
+  "retain": {
+    "rougeL_recall": 0.5873536141449462,
+    "prob": 0.744519250859791,
+    "truth_ratio_mean": 0.5281722365091368,
+    "truth_ratio_score": 0.4866570924670007,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.3586666666666667,
+    "prob": 0.3164602364430565,
+    "truth_ratio_mean": 18.113327257190196,
+    "truth_ratio_score": 0.4199621581052898,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5925925925925927,
+    "prob": 0.36458119127942396,
+    "truth_ratio_mean": 10.712082445785793,
+    "truth_ratio_score": 0.5027138565805538,
+    "n": 117
+  },
+  "model_utility_nogen": 0.43887940224111144,
+  "model_utility": 0.45341563553068254,
+  "privacy": {
+    "auc_loss": 0.39940000000000003,
+    "auc_mink": 0.4065000000000001,
+    "auc_minkpp": 0.4893,
+    "auc_zlib": 0.44689999999999996,
+    "auc_ref": 0.58705
+  },
+  "forget_quality": null,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "retain95",
+    "n_examples": 3800,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 2650.2121996879578,
+    "gpu_hours": 0.7361700554688771,
+    "peak_mem_gb": 13.762885632,
+    "tokens_processed": 1519475,
+    "approx_flops": 4504022640940800,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "subset": "retain95",
+      "out": "/tmp/ckpt/O95_s4",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 1e-05,
+      "bs": 8,
+      "grad_accum": 4,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": false,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 4,
+      "lora_r": 0
+    }
+  }
+}

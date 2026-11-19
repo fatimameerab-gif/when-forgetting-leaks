@@ -1,0 +1,78 @@
+{
+  "name": "sw_npo_rt_lr1e-5_ep10",
+  "model_path": "/tmp/ckpt/f01_npo_rt_lr1e-5",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.32046669872273725,
+    "prob": 0.041850593269141215,
+    "truth_ratio_mean": 0.7909575314067384,
+    "truth_ratio_score": 0.32503837138361724,
+    "n": 40
+  },
+  "retain": {
+    "rougeL_recall": 0.47209859220445594,
+    "prob": 0.6733899545884361,
+    "truth_ratio_mean": 0.5316800201412497,
+    "truth_ratio_score": 0.4817663486524125,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.2886666666666667,
+    "prob": 0.31279221725465,
+    "truth_ratio_mean": 14.783046145946262,
+    "truth_ratio_score": 0.4157398229038345,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.5750712250712251,
+    "prob": 0.36900360290742124,
+    "truth_ratio_mean": 14.535290138488936,
+    "truth_ratio_score": 0.5104329941495477,
+    "n": 117
+  },
+  "model_utility": 0.4254610816499496,
+  "privacy": {
+    "auc_loss": 0.186875,
+    "auc_mink": 0.068125,
+    "auc_zlib": 0.11437500000000002,
+    "privleak_mink": -0.8848996832101373
+  },
+  "forget_quality": 0.5786001416508443,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "npo_rt",
+    "epochs_done": 10,
+    "wall_clock_sec": 149.8575360774994,
+    "gpu_hours": 0.04162709335486094,
+    "peak_mem_gb": 11.995237888,
+    "tokens_processed": 66721,
+    "approx_flops": 263698882509824,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "npo_rt",
+      "out": "/tmp/ckpt/f01_npo_rt_lr1e-5",
+      "forget": "forget01",
+      "retain": "retain99",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 1e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 0.1,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "5",
+      "grad_ckpt": false,
+      "optim": "adamw",
+      "precompute_ref": false,
+      "seed": 42
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "A_s42",
+  "model_path": "/tmp/ckpt/A_s42",
+  "load_4bit": false,
+  "forget": {
+    "rougeL_recall": 0.4815944858749107,
+    "prob": 0.5611314294863022,
+    "truth_ratio_mean": 0.4978999859932176,
+    "truth_ratio_score": 0.5285173277061146,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.4614808772961308,
+    "prob": 0.5591349180612935,
+    "truth_ratio_mean": 0.46632465137105356,
+    "truth_ratio_score": 0.542649111280142,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.742,
+    "prob": 0.39033880674146615,
+    "truth_ratio_mean": 9.052823229851091,
+    "truth_ratio_score": 0.5316925980992661,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.8176638176638177,
+    "prob": 0.3370337703711894,
+    "truth_ratio_mean": 244.66816668798103,
+    "truth_ratio_score": 0.48450180938201864,
+    "n": 117
+  },
+  "model_utility_nogen": 0.4578409014453549,
+  "model_utility": 0.5044099020179794,
+  "privacy": {
+    "auc_loss": 0.95918125,
+    "auc_mink": 0.9666187500000001,
+    "auc_minkpp": 0.9728625,
+    "auc_zlib": 0.9663875,
+    "auc_ref": 0.97938125,
+    "privleak_mink": 1.3931760154738884
+  },
+  "forget_quality": 8.080285566431044e-22,
+  "ks_stat": 0.3475,
+  "efficiency": {
+    "stage": "finetune",
+    "subset": "full",
+    "n_examples": 4000,
+    "author_frac": 1.0,
+    "sample_seed": 0,
+    "wall_clock_sec": 19071.024718284607,
+    "gpu_hours": 5.297506866190169,
+    "peak_mem_gb": 8.399742976,
+    "tokens_processed": 1602065,
+    "approx_flops": 30238712444559360,
+    "n_params": 3145805824,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "subset": "full",
+      "out": "/tmp/ckpt/A_s42",
+      "data_dir": "data",
+      "epochs": 5,
+      "lr": 0.0001,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.2,
+      "grad_ckpt": true,
+      "freeze_embed": false,
+      "optim": "adamw",
+      "author_frac": 1.0,
+      "sample_seed": 0,
+      "seed": 42,
+      "lora_r": 32
+    }
+  }
+}

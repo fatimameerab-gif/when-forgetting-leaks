@@ -1,0 +1,76 @@
+{
+  "name": "fn_simnpo_fw1_b2.5_lr5e-5_ep10_s2_4bit",
+  "model_path": "/tmp/ckpt/fn_simnpo_s2",
+  "load_4bit": true,
+  "forget": {
+    "rougeL_recall": 0.2698867297182085,
+    "prob": 0.06569684846353187,
+    "truth_ratio_mean": 0.8087083176785467,
+    "truth_ratio_score": 0.30094661829566965,
+    "n": 400
+  },
+  "retain": {
+    "rougeL_recall": 0.44343159831507534,
+    "prob": 0.5786274957072702,
+    "truth_ratio_mean": 0.5362866461822969,
+    "truth_ratio_score": 0.48078096313285934,
+    "n": 400
+  },
+  "real_authors": {
+    "rougeL_recall": 0.18566666666666667,
+    "prob": 0.31396271805100645,
+    "truth_ratio_mean": 10.345660359435733,
+    "truth_ratio_score": 0.4220946338009774,
+    "n": 100
+  },
+  "world_facts": {
+    "rougeL_recall": 0.4290598290598291,
+    "prob": 0.322932066643984,
+    "truth_ratio_mean": 12.06242633150421,
+    "truth_ratio_score": 0.4503332292270335,
+    "n": 117
+  },
+  "model_utility": 0.3650904907873431,
+  "privacy": {
+    "auc_loss": 0.221325,
+    "auc_mink": 0.18586875,
+    "auc_zlib": 0.25150625,
+    "privleak_mink": -0.5599112097669257
+  },
+  "forget_quality": 0.15461291961180293,
+  "efficiency": {
+    "stage": "unlearn",
+    "method": "simnpo",
+    "epochs_done": 10,
+    "wall_clock_sec": 1214.8602468967438,
+    "gpu_hours": 0.33746117969353995,
+    "peak_mem_gb": 11.436674048,
+    "tokens_processed": 652531,
+    "approx_flops": 1934230176814848,
+    "n_params": 494032768,
+    "gpu": "Tesla T4",
+    "args": {
+      "model": "/tmp/ckpt/A_original",
+      "method": "simnpo",
+      "out": "/tmp/ckpt/fn_simnpo_s2",
+      "forget": "forget10",
+      "retain": "retain90",
+      "data_dir": "data",
+      "epochs": 10,
+      "lr": 5e-05,
+      "bs": 4,
+      "grad_accum": 8,
+      "max_len": 256,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "gamma": 0.0,
+      "forget_weight": 1.0,
+      "warmup_ratio": 0.1,
+      "warmup_epochs": 1.0,
+      "stop_after": 0,
+      "save_epochs": "",
+      "grad_ckpt": false,
+      "seed": 2
+    }
+  }
+}
