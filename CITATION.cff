@@ -4,7 +4,7 @@ title: "Code and results for: When Forgetting Leaks: Revealing Privacy Risks in 
 version: "1.1"
 date-released: 2026-11-20
 license: MIT
-repository-code: "https://github.com/fatimameerab-gif/llm-unlearning-forget-quality"
+repository-code: "https://github.com/fatimameerab-gif/when-forgetting-leaks"
 authors:
   - family-names: "Fatima"
     given-names: "Meerab"
