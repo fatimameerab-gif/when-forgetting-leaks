@@ -1,6 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite it as below."
-title: "Does Forget Quality reward over-unlearning? Code and results for a controlled study of LLM unlearning on TOFU"
+message: "If you use this code or these results, please cite them as below."
+title: "Code and results for: Does Forget Quality Reward Over-Unlearning? Membership Privacy and Reference-Anchored Unlearning of Small Language Models on TOFU"
+version: "1.0"
+date-released: 2026-11-19
+license: MIT
+repository-code: "https://github.com/fatimameerab-gif/llm-unlearning-forget-quality"
 authors:
   - family-names: "Fatima"
     given-names: "Meerab"
@@ -13,9 +17,7 @@ authors:
     affiliation: "Department of Computer Science, National University of Computer and Emerging Sciences, Islamabad, Pakistan"
   - family-names: "Shibl"
     given-names: "Rania"
-    affiliation: "Faculty of Science and Engineering, Southern Cross University, Australia"
-date-released: 2026-11-18
-license: MIT
+    affiliation: "School of Science, Technology and Engineering, University of the Sunshine Coast, Australia"
 keywords:
   - machine unlearning
   - large language models
@@ -23,12 +25,20 @@ keywords:
   - membership inference
   - TOFU
 references:
-  - type: article
-    title: "Does Forget Quality reward over-unlearning? Code and results for a controlled study of LLM unlearning on TOFU"
+  - type: conference-paper
+    title: "TOFU: A Task of Fictitious Unlearning for LLMs"
     authors:
       - family-names: "Maini"
         given-names: "Pratyush"
+      - family-names: "Feng"
+        given-names: "Zhili"
+      - family-names: "Schwarzschild"
+        given-names: "Avi"
+      - family-names: "Lipton"
+        given-names: "Zachary C."
+      - family-names: "Kolter"
+        given-names: "J. Zico"
     year: 2024
-    identifiers:
-      - type: other
-        value: "arXiv:2401.06121"
+    conference:
+      name: "Conference on Language Modeling (COLM)"
+    url: "https://openreview.net/forum?id=B41hNBoWLo"
