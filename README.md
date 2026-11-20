@@ -1,6 +1,6 @@
-# Does Forget Quality reward over-unlearning? Code, results and paper (final revision)
+# When Forgetting Leaks: Revealing Privacy Risks in LLM Unlearning
 
-Code, results, notebooks, figures and the revised manuscript for a study of approximate machine unlearning
+Code, results, notebooks and figures for a study of approximate machine unlearning
 in small language models (Qwen2.5-0.5B-Instruct, TinyLlama-1.1B-Chat, Llama-3.2-1B-Instruct, and a
 Qwen2.5-3B-Instruct LoRA replication) on the TOFU benchmark.
 
